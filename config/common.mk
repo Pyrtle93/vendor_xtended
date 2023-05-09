@@ -212,8 +212,8 @@ PRODUCT_PACKAGE_OVERLAYS += \
 -include vendor/xtended/config/partner_gms.mk
 
 # Face Unlock
-TARGET_FACE_UNLOCK_SUPPORTED ?= true
-ifeq ($(TARGET_FACE_UNLOCK_SUPPORTED),true)
+TARGET_FACE_UNLOCK_SUPPORTED ?= false
+ifeq ($(TARGET_FACE_UNLOCK_SUPPORTED),false)
 PRODUCT_PACKAGES += \
     FaceUnlockService
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
