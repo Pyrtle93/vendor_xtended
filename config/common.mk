@@ -79,11 +79,9 @@ RELAX_USES_LIBRARY_CHECK := true
 # Versioning
 include vendor/xtended/config/version.mk
 
-# GMS/GAPPS
+# GMS
 ifeq ($(WITH_GMS),true)
-$(call inherit-product, vendor/gms/products/gms.mk)
-else ifeq ($(WITH_GAPPS),true)
-$(call inherit-product, vendor/gapps/common/common-vendor.mk)
+$(call inherit-product, vendor/gms/gms_full.mk)
 endif
 
 # Do not include art debug targets
